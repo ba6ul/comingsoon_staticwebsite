@@ -23,11 +23,58 @@
             text-align: center;
         }
 
-        /* Container to keep things organized */
+        /* --- Nav Bar --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            background: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(10px); 
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #aaa;
+        }
+
+        /* Nav Padding */
+        @media (max-width: 600px) {
+            nav { padding: 15px 20px; }
+            .nav-links { gap: 15px; }
+        }
+
+     
         .container {
             width: 90%;
             max-width: 600px;
             padding: 20px;
+            margin-top: 60px;
         }
 
         h1 {
@@ -43,11 +90,11 @@
             margin-bottom: 40px;
         }
 
-        /* Responsive Video Container */
+      
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             margin-bottom: 40px;
             border-radius: 12px;
@@ -100,6 +147,14 @@
     </style>
 </head>
 <body>
+
+    <nav>
+        <div class="logo">Haripin</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About Me</a>
+        </div>
+    </nav>
 
     <div class="container">
         <h1>Coming Soon</h1>
